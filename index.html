@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Calendar API Quickstart</title>
+    <meta charset="utf-8" />
+    <link href='https://fonts.googleapis.com/css?family=M PLUS Rounded 1c' rel='stylesheet'>
+    <style type="text/css">
+          html, body {
+            position: relative;
+            width: 1920px;
+            height: 1080px;
+            background: linear-gradient(90deg, #EE4323 36%, #DCDCDC 36%);
+          }
+
+          .box1 {
+            position: absolute;
+            width: 1000px;
+            height: 141px;
+            left: 832px;
+            top: 240px;
+            background: #FFFFFF;
+          }
+
+          .box2 {
+
+            position: absolute;
+            width: 1000px;
+            height: 141px;
+            left: 832px;
+            top: 453px;
+
+            background: #FFFFFF;
+          }
+
+          .box3 {
+            position: absolute;
+            width: 1000px;
+            height: 141px;
+            left: 832px;
+            top: 664px;
+
+            background: #FFFFFF;
+          }
+
+          .box4 {
+            position: absolute;
+            width: 1000px;
+            height: 141px;
+            left: 832px;
+            top: 879px;
+
+            background: #FFFFFF;
+          }
+
+          p {
+            position: absolute;
+            width: 500px;
+            height: 258px;
+            left: 69px;
+            top: 130px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-size: 96px;
+            line-height: 143px;
+            color: #ffffff;
+          }
+          h1 {
+            position: absolute;
+            width: 1005px;
+            height: 123px;
+            left: 828px;
+            top: 68px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 75px;
+            line-height: 111px;
+            color: #000000;
+
+          }
+
+          .rec1 {
+            position: absolute;
+            width:174px;
+            height: 143px;
+            left: 827px;
+            top: 239px;
+            background: #160f66;
+          }
+
+          .rec2 {
+            position: absolute;
+            width: 174px;
+            height: 143px;
+            left: 827px;
+            top: 452px;
+            background: #ee4323;
+          }
+
+          .rec3 {
+            position: absolute;
+            width: 174px;
+            height: 143px;
+            left: 827px;
+            top: 664px;
+            background: #160f66;
+          }
+
+          .rec4 {
+            position: absolute;
+            width: 174px;
+            height: 141px;
+            left: 827px;
+            top: 879px;
+            background: #ee4323;
+          }
+          h2 {
+            position: absolute;
+            width: 792px;
+            height: 143px;
+            left: 1024px;
+            top: 200px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 74px;
+            color:#000000;
+          }
+          h3 {
+            position: absolute;
+            width: 792px;
+            height: 143px;
+            left: 1024px;
+            top: 400px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 74px;
+            color: #000000;
+          }
+          h4 {
+            position: absolute;
+            width: 792px;
+            height: 143px;
+            left: 1024px;
+            top: 590px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 74px;
+            color: #000000;
+          }
+          h5 {
+            position: absolute;
+            width: 792px;
+            height: 143px;
+            left: 1024px;
+            top: 790px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 74px;
+            color: #000000;
+          }
+
+          {
+
+          }
+          .day1 {
+            position: absolute;
+            width: 174px;
+            height: 143px;
+            left: 827px;
+            top: 250px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-size: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fffefe;
+          }
+            
+          .month1 {
+            font-size: 40px;
+            text-align: center;
+            color: #fffefe;
+          }
+
+          .day2 {
+            position: absolute;
+            width: 174px;
+            height: 143px;
+            left: 827px;
+            top: 465px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-size: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fffefe;
+          }
+            
+          .month2 {
+            font-size: 40px;
+            text-align: center;
+            color: #fffefe;
+          }
+
+          .day3 {
+            position: absolute;
+            width: 174px;
+            height: 143px;
+            left: 827px;
+            top: 675px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-size: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fffefe;
+          }
+            
+          .month3 {
+            font-family: 'M PLUS Rounded 1c';
+            font-size: 40px;
+            text-align: center;
+            color: #fffefe;
+          }
+
+          .day4 {
+            position: absolute;
+            width: 174px;
+            height: 143px;
+            left: 827px;
+            top: 890px;
+
+            font-family: 'M PLUS Rounded 1c';
+            font-style: normal;
+            font-size: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #fffefe;
+          }
+            
+          .month4 {
+            font-family: 'M PLUS Rounded 1c';
+            font-size: 40px;
+            text-align: center;
+            color: #fffefe;
+          }
+    </style>
+  </head>
+  <body>
+    <p>Ommasign Calendar</p>
+    <h1 id="upcoming">upcoming events:</h1>
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize_button" style="display: none;">Authorize</button>
+    <button id="signout_button" style="display: none;">Sign Out</button>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+
+    <div class="rec1"></div>
+    <div class="rec2"></div>
+    <div class="rec3"></div>
+    <div class="rec4"></div>
+    <h2 id="event1"><br></h2>
+    <h3 id="event2"><br></h3>
+    <h4 id="event3"><br></h4>
+    <h5 id="event4"><br></h5>
+
+    <div class="day1" id="day1"><br><span id="month1"></span></div>
+    <div class="day2" id="day2"><br><span id="month2"></span></div>
+    <div class="day3" id="day3"><br><span id="month3"></span></div>
+    <div class="day4" id="day4"><br><span id="month4"></span></div>
+
+    
+      <script type="text/javascript">
+      // Client ID and API key from the Developer Console
+      var CLIENT_ID = '';
+      var API_KEY = '';
+
+      // Array of API discovery doc URLs for APIs used by the quickstart
+      var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
+
+      // Authorization scopes required by the API; multiple scopes can be
+      // included, separated by spaces.
+      var SCOPES = "https://www.googleapis.com/auth/calendar.readonly";
+
+      var authorizeButton = document.getElementById('authorize_button');
+      var signoutButton = document.getElementById('signout_button');
+
+      /**
+       *  On load, called to load the auth2 library and API client library.
+       */
+      function handleClientLoad() {
+        gapi.load('client:auth2', initClient);
+      }
+
+      /**
+       *  Initializes the API client library and sets up sign-in state
+       *  listeners.
+       */
+      function initClient() {
+        gapi.client.init({
+          apiKey: API_KEY,
+          clientId: CLIENT_ID,
+          discoveryDocs: DISCOVERY_DOCS,
+          scope: SCOPES
+        }).then(function () {
+          // Listen for sign-in state changes.
+          gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+          // Handle the initial sign-in state.
+          updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+          authorizeButton.onclick = handleAuthClick;
+          signoutButton.onclick = handleSignoutClick;
+        }, function(error) {
+          appendPre(JSON.stringify(error, null, 2));
+        });
+      }
+
+      /**
+       *  Called when the signed in status changes, to update the UI
+       *  appropriately. After a sign-in, the API is called.
+       */
+      function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+          authorizeButton.style.display = 'none';
+          signoutButton.style.display = 'block';
+          listUpcomingEvents();
+        } else {
+          authorizeButton.style.display = 'block';
+          signoutButton.style.display = 'none';
+        }
+      }
+
+      /**
+       *  Sign in the user upon button click.
+       */
+      function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+      }
+
+      /**
+       *  Sign out the user upon button click.
+       */
+      function handleSignoutClick(event) {
+        gapi.auth2.getAuthInstance().signOut();
+      }
+
+      /**
+       * Append a pre element to the body containing the given message
+       * as its text node. Used to display the results of the API call.
+       *
+       * @param {string} message Text to be placed in pre element.
+       */
+      function appendPre(message) {
+        var pre = document.getElementById('content');
+        var textContent = document.createTextNode(message + '\n');
+        pre.appendChild(textContent);
+      }
+
+      function checkTime(i) {
+          if(i<10) {
+            i = "0" + i;
+          }
+          return i;
+      }
+ 
+      
+      /**
+       * Print the summary and start datetime/date of the next ten events in
+       * the authorized user's calendar. If no events are found an
+       * appropriate message is printed.
+       */
+      function listUpcomingEvents() {
+        gapi.client.calendar.events.list({
+          'calendarId': 'primary',
+          'timeMin': (new Date()).toISOString(),
+          'showDeleted': false,
+          'singleEvents': true,
+          'maxResults': 10,
+          'orderBy': 'startTime'
+        }).then(function(response) {
+          var events = response.result.items;
+
+          if (events.length > 0) {
+            for (i = 0; i < 4; i++) {
+              var event = events[i];
+              var when = event.start.dateTime;
+              if (!when) {
+                when = event.start.date;
+              }
+              var startDate = new Date(events[i].start.dateTime);
+              var startDay = startDate.getDate();
+              var startHour = startDate.getHours();
+              var startMinute = startDate.getMinutes();
+
+              var endDate = new Date(events[i].end.dateTime);
+              var endHour  = endDate.getHours();
+              var endMinute = endDate.getMinutes();
+
+              var text = "event";
+              var dayTag = "day";
+              var monthTag = "month";
+
+              var tagName = text.concat(i+1);
+              var dayName = dayTag.concat(i+1);
+              var monthName = monthTag.concat(i+1);
+
+              var month_name = function(date){
+                monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+              return monthList[date.getMonth()];
+              };
+              var dayOfMonth = month_name(startDate);
+
+              document.getElementById(tagName).innerHTML = events[i].summary + "<br />" + checkTime(startHour) + ':' + checkTime(startMinute) + ' - ' + checkTime(endHour) + ':' + checkTime(endMinute);
+
+              document.getElementById(dayName).innerHTML = startDay + "<br />" + dayOfMonth; 
+
+              //document.getElementById(monthName).innerHTML = dayOfMonth;            
+            }
+            
+            
+            console.log(events);
+          } else {
+            appendPre('No upcoming events found.');
+          }
+          console.log(events[0]);
+
+          
+        });
+      }
+
+    </script>
+
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+  </body>
+</html>
